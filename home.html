@@ -1,0 +1,33 @@
+<h3>home</h3>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .загрузка {
+            border: 1px solid black;
+            border-radius: 50px 50px 50px 50px;
+            background-color: rgba(218, 218, 218, 0.5); /* Полупрозрачный цвет фона */
+            padding: 10px 5px; /* Отступы */
+            cursor: pointer; /* Указатель при наведении */
+           
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="загрузка">
+        <section>
+            <h2>Загрузить видео</h2>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="videoFile">Выберите видео:</label>
+                <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
+                <button type="submit">Загрузить</button> 
+            </form>
+        </section>
+    </div>
+</body>
+</html>
+
