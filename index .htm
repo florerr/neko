@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"> <!-- Устанавливает кодировку документа как UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Настройки для адаптивного дизайна -->
+    <title>Страница привествие</title> <!-- Заголовок страницы, отображаемый в вкладке браузера -->
+    <link rel="stylesheet" href="index.css"> <!-- Подключение внешнего CSS-файла для стилизации страницы -->
+    <script src="" type="text/javascript"></script> <!-- Подключение внешнего JavaScript-файла -->
+</head>
+
+<body>
+    <div id="инконки">
+    <a href="home/home.html"> 
+        <img src="home/home.png" alt="home" style="width: 150px; height: 150px;"> 
+    <a href="phote\шортс(1).png">
+        <img src="frontend/shorts/horts.html" alt="horts" style="width: 150px; height: 150px;">
+        <a href="frontend\video\vidio.html">
+            <img src="phote\видио.png" alt="video" style="width: 150px; height: 150px;">
+            <a href="frontend\статьи и фото\статьи ифото.html">
+                <img src="phote\ст.png" alt="ст" style="width: 150px; height: 150px;">
+                <a href="frontend\чат\1.html">
+                    <img src="phote\чат.png" alt="чат" style="width: 150px; height: 150px;">
+                   
+            
+    </div>
+
+    <div class="footer-image"> <!-- Контейнер для логотипа и ссылки на его скачивание -->
+        <a href="./phote/neko.png" download> <!-- Ссылка для скачивания логотипа -->
+            <img src="./phote/neko.png" alt="Лого" style="width: 150px; height: 150px;"> <!-- Логотип с заданными размерами -->
+            <p>Скачать лого</p> <!-- Текстовая подсказка под логотипом -->
+        </a>
+    </div>
+
+    <div class="Зарегистрироваться"> <!-- Контейнер для формы регистрации -->
+        <h1>Зарегистрироваться</h1> <!-- Заголовок формы регистрации -->
+        <form action="index.php" method="post"> <!-- Форма отправляется на index.php методом POST -->
+            <h3>Имя</h3> <!-- Заголовок поля ввода имени -->
+            <input type="text" name="USERNAME" required> <!-- Поле ввода для имени, обязательное к заполнению -->
+
+            <h3>Почта</h3> <!-- Заголовок поля ввода почты -->
+            <input type="email" name="EMAIL" required> <!-- Поле ввода для почты, обязательное к заполнению -->
+
+            <h3>Пароль</h3> <!-- Заголовок поля ввода пароля -->
+            <input type="password" name="PASSWORD" required> <!-- Поле ввода для пароля, обязательное к заполнению -->
+
+            <button type="submit">Зарегистрироваться</button> <!-- Кнопка отправки формы с текстом "Зарегистрироваться" -->
+        </form>
+    </div>
+
+</body>
+</html>
