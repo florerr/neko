@@ -1,0 +1,65 @@
+body {
+    margin: 20px; /* Отступы вокруг тела страницы */
+}
+
+.поиск {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    border-radius: 50px;
+    border: 1px solid #232723; /* Граница поиска */
+    margin: 0 200px; /* Отступы для блока поиска */
+}
+
+.поиск input[type="search"] {
+    width: 100%; /* Ширина поля ввода */
+    border: 1px solid #ccc; /* Граница поля ввода */
+    padding: 5px;
+    border-radius: 50px 0 0 50px; /* Скругление углов */
+}
+
+.поиск button {
+    display: flex; 
+    align-items: center; 
+    border: none; 
+    background: #838383; /* Фон кнопки */
+    border-radius: 0 50px 50px 0; /* Скругление углов */
+    cursor: pointer;
+}
+
+.поиск img {
+    width: 30px; 
+    height: 30px; 
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+.карты :ho {
+    border-radius: 5px; 
+    padding: 20px; /* Уменьшено для лучшего отображения текста */
+    margin: 25px; 
+    background-color: #fffbfb; 
+    box-shadow: 4px 10px rgba(0, 0, 0, 0.2); 
+    flex: 1; /* Делаем карты одинаковой ширины */
+}
+
+img {
+    max-width: 100%; 
+}
+
+@media (max-width: 768px) {
+    .поиск {
+        margin: 0 20px; /* Уменьшаем отступы на мобильных устройствах */
+    }
+    
+    .поиск input[type="search"] {
+        width: calc(100% - 40px); /* Учитываем ширину иконки */
+    }
+    
+    .container {
+        flex-direction: column; /* Переключаем на столбец для мобильных устройств */
+        align-items: center;
+    }
+}

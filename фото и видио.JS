@@ -1,0 +1,2 @@
+confirm(gherhrt)
+console(rtfg)

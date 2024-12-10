@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат</title>
+    <link rel="stylesheet" href="frontend/чат/1.css">
+    <script src="/path/to/angular.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <style>
+        body {
+            background-color: #808080;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            width: 900px;
+        }
+        .chat-box {
+            border-radius: 9px;
+            margin-bottom: 1px;
+            padding: 20px;
+            height: 500px; 
+            overflow-y: auto;
+            background-color: white;
+        }
+        .input-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 40px;
+            border: 1px solid #ccc;
+            flex-grow: 1; 
+            margin-right: 10px; 
+        }
+        button {
+            padding: 10px; 
+            border-radius: 40px;
+            border: none;
+            background-color: #191d1a;
+            color: white;
+            cursor: pointer; 
+        }
+        button:hover {
+            background-color: #882121;
+        }
+        .skrepka, .smail {
+            width: 50px; 
+            height: 50px; 
+            background-color: transparent; 
+            border: none; 
+            cursor: pointer; 
+        }
+        .skrepka img, .smail img {
+            width: 100%; 
+            height: auto; 
+        }
+        #dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .smail-dropdown-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .smail-dropdown-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Введите сообщение...">
+            <button class="skrepka">📎</button>
+            <button id="smail"class="smail" onclick="toggleDropdown()">😊</button>
+            <button id="send-button">Отправить</button>
+        </div>
+        <div id="dropdown">
+            <div class="smail-dropdown-item" onclick="addEmoji('😊')">😊</div>
+            <div class="smail-dropdown-item" onclick="addEmoji('😂')">😂</div>
+            <div class="smail-dropdown-item" onclick="addEmoji('😍')">😍</div>
+            <div class="smail-dropdown-item" onclick="addEmoji('😎')">😎</div>
+            <div class="smail-dropdown-item" onclick="addEmoji('😢')">😢</div>
+        </div>
+    </div>

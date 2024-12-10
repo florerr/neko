@@ -1,14 +1,20 @@
 {
-  "name": "vidio",
+  "name": "neko",
   "version": "1.0.0",
+  "description": "https://github.com/florerr/neko.git",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+   "start": "node messager.js",
+    "dev":"nodemon messager.js>"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "video.js": "^8.18.1"
-  }
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7",
+    "socket.io": "^4.8.0"
+  },
+  "keywords": []
 }
