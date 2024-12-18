@@ -1,0 +1,146 @@
+
+
+        /* Стили для поиска */
+        .поиск {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .поиск input[type="search"] {
+            width: 60%; /* Ширина поля ввода */
+            border: 1px solid #000000; 
+            padding: 7px; /* Увеличенные отступы для удобства ввода */
+            border-radius: 50px 0 0 50px; 
+            transition: border-color 0.3s; /* Плавный переход для изменения цвета рамки */
+            margin-left: 30%;
+        }
+
+        .поиск input[type="search"]:focus {
+            border-color: #000000; /* Изменение цвета рамки при фокусе */
+            outline: none; /* Убираем стандартный контур при фокусе */
+        }
+
+        .поиск button {
+            display: flex; 
+            align-items: center; 
+            border: none; 
+            background: #838383; 
+            border-radius: 0 50px 50px 0; 
+            cursor: pointer;
+            padding: 8px 12px; /* Добавлены отступы для кнопки */
+            transition: background-color 0.3s; /* Плавный переход для изменения цвета фона */
+            margin-right: 30%;
+        }
+
+        .поиск button:hover {
+            background-color: #6c757d; /* Цвет фона при наведении */
+        }
+
+        .поиск button:active {
+            background-color: #993535; /* Цвет фона при нажатии */
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column; /* Вертикальное расположение элементов */
+            align-items: center; /* Центрируем элементы внутри video-container */
+            text-align: center; /* Центрируем текст внутри video-container */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень для контейнера */
+            border: 0.5px solid #000; /* Граница контейнера */
+            border-radius: 8px; /* Закругление углов */
+            background-color: #f9f9f9; /* Цвет фона */
+            padding: 17px; /* Внутренние отступы */
+            margin-top: 13px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+            max-width: 1200px; /* Максимальная ширина контейнера */
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-js {
+            border-radius: 10px; /* Закругляем углы видеоплеера */
+            max-width: 100%; /* Ограничиваем максимальную ширину плеера */
+        }
+
+        .reaction {
+            display: flex;
+            flex-direction: row; /* Горизонтальное расположение кнопок */
+            justify-content: center; /* Центрируем кнопки */
+            margin-top: 10px; /* Отступ сверху для кнопок */
+        }
+
+        .vjs-no-js {
+            display: none; /* Скрываем текст, если JavaScript включен */
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #icons {
+            position: fixed;
+            left: 0;
+            padding: 10px;
+            background-color: #706d6d;
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        
+        @media screen and (min-width: 768px) {
+            #icons {
+                top: 50%;
+                transform: translateY(-50%);
+                width: auto;
+                flex-direction: column;
+            }
+            
+            #icons ul {
+                flex-direction: column;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            #icons {
+                bottom: 0;
+                width: 100%;
+            }
+        }
+        
+        #icons ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-block-size: 10%;
+        }
+        
+        #icons li {
+            display: flex;
+            align-items: center;
+        }
+        
+        #icons a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            transition: transform 0.2s;
+        }
+
+        #icons a:hover {
+            transform: scale(1.1);
+        }
+
+       /* #icons.sticky {
+            position: fixed;
+        }

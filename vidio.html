@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    <link href="vidio.css" rel="stylesheet" />
+    <title>Видеоплеер</title>
+</head>
+<body>
+
+    <!-- Поиск -->
+    <div class="поиск">
+        <input type="search" name="search" required placeholder="Поиск...">
+        <button type="submit">
+            <img src="photo/лупа.png" alt="Поиск" style="height: 19px; width: 40px;">
+        </button>
+        <!-- Фото профиля -->
+        <img alt="Фото профиля" src="photo_2024-10-22_20-07-03.jpg" style="border-radius: 50%; height: 32px; width: 32px;">
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- Видеоплееры -->
+            <div class="video-container">
+                <h3>Название Видео 1</h3>
+                <video id="my-video-1" class="video-js" controls preload="auto" poster="photo_2024-10-22_20-07-03.jpg" data-setup="{}">
+                    <source src="путь_к_вашему_видео_1.mp4" type="video/mp4" />
+                    <p class="vjs-no-js">Чтобы просмотреть это видео, включите JavaScript и обновите браузер, который <a href="https://videojs.com/html5-video-support/" target="_blank">поддерживает HTML5 видео</a>.</p>
+                </video>
+                
+                <div class="reaction">
+                    <input type="button" value="👍" aria-label="Поддержать видео" onclick="reactToVideo(1, true)"> 
+                    <input type="button" value="👎" aria-label="Не поддерживать видео" onclick="reactToVideo(1, false)">
+                </div>
+                
+                <div id="message-1"></div>
+                <p>Описание видео 1.</p>
+            </div>
+     <!-- Видеоплееры -->
+     <div class="video-container">
+        <h3>Название Видео 1</h3>
+        <video id="my-video-1" class="video-js" controls preload="auto" poster="photo_2024-10-22_20-07-03.jpg" data-setup="{}">
+            <source src="путь_к_вашему_видео_1.mp4" type="video/mp4" />
+            <p class="vjs-no-js">Чтобы просмотреть это видео, включите JavaScript и обновите браузер, который <a href="https://videojs.com/html5-video-support/" target="_blank">поддерживает HTML5 видео</a>.</p>
+        </video>
+        
+        <div class="reaction">
+            <input type="button" value="👍" aria-label="Поддержать видео" onclick="reactToVideo(1, true)"> 
+            <input type="button" value="👎" aria-label="Не поддерживать видео" onclick="reactToVideo(1, false)">
+        </div>
+        
+        <div id="message-1"></div>
+         <p>Описание видео 1.</p>
+<img src="frontend/video/photo_2024-12-13_11-48-10.jpg" alt="">
+    
+<div id="icons">
+  
+            <a href="/frontend/статьи и фото/статьи ифото.html">             
+                <img src="/frontend/video/photo/ст.png" alt="Статьи" style="width: 150px; height: 150px;">
+            </a>
+            <a href="/frontend/чат/1.html">             
+                <img src="/frontend/video/photo/чат.png" alt="Чат" style="width: 150px; height: 150px;">
+            </a>
+            <a href="/frontend/shorts/shorts.html">             
+                <img src="/frontend/video/photo/шортс.png" alt="Шортс" style="width: 150px; height: 150px;">
+            </a>
+            <a href="/home/home.html">             
+                <img src="/frontend/video/photo/home.png" alt="Домой" style="width: 150px; height: 150px;">
+       
+</div>
+    <!-- Подключение библиотеки Video.js -->
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+    <script src="VIDI.JS"></script>
+
