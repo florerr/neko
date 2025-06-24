@@ -1,245 +1,64 @@
 
-
-
-/* С/* Стили для поиска (Styles for search) */
-.поиск {
-    display: flex; /* Использует flexbox для расположения элементов (Uses flexbox for element layout) */
-    justify-content: space-between; /* Распределяет пространство между элементами (Distributes space between elements) */
-    align-items: center; /* Центрирует элементы по вертикали (Centers items vertically) */
+/* Панель поиска */
+.search-panel {
+  display: flex; /* Включает flex-контейнер */
+  justify-content: space-between; /* Распределяет элементы с равными промежутками */
+  align-items: center; /* Выравнивает элементы по центру по вертикали */
+  width: 20%; /* Ширина панели 60% от родителя */
+  border: 1px solid #000000; /* Черная рамка толщиной 1px */
+  padding: 1px; /* Внутренний отступ 7px */
+  border-radius: 50px 50px 50px 50px; /* Скругление углов: верхний левый и нижний левый */
+  transition: border-color 0.10s; /* Плавное изменение цвета рамки */
+  margin-left: 30%; /* Отступ слева 30% */
+  border-color: #000000; /* Цвет рамки */
+  outline: none; /* Убирает стандартное выделение */
 }
 
-.поиск input[type="search"] {
-    width: 60%; /* Ширина поля ввода 60% (Input field width 60%) */
-    border: 1px solid #000000; /* Черная рамка толщиной 1px (1px solid black border) */
-    padding: 7px; /* Внутренний отступ 7px (Internal padding 7px) */
-    border-radius: 50px 0 0 50px; /* Скругление левых углов (Rounded left corners) */
-    transition: border-color 0.3s; /* Плавное изменение цвета рамки (Smooth border color transition) */
-    margin-left: 50%; /* Автоматический отступ слева (Auto margin on left) */
+/* Контейнер с видео */
+.videos-container {
+  display: flex; /* Включает flex-контейнер */
+  flex-wrap: wrap; /* Разрешает перенос элементов на новую строку */
+  gap: 20px; /* Отступ между видео-карточками */
+  padding: 20px; /* Внутренний отступ контейнера */
 }
 
-.поиск input[type="search"]:focus {
-    border-color: #000000; /* Цвет рамки при фокусе (Border color when focused) */
-    outline: none; /* Убирает стандартное выделение (Removes default outline) */
+/* Карточка видео */
+.video-card {
+  flex: 1; /* Гибкий рост элемента */
+  min-width: 300px; /* Минимальная ширина карточки */
+  max-width: 400px; /* Максимальная ширина карточки */
+  border: 1px solid #ddd; /* Серая рамка */
+  border-radius: 8px; /* Скругление углов */
+  padding: 10px; /* Внутренний отступ */
 }
 
-.поиск button {
-    display: flex; /* Использует flexbox (Uses flexbox) */
-    align-items: center; /* Центрирует содержимое по вертикали (Centers content vertically) */
-    border: none; /* Убирает рамку (Removes border) */
-    background: #838383; /* Серый цвет фона (Gray background color) */
-    border-radius: 0 50px 50px 0; /* Скругление правых углов (Rounded right corners) */
-    cursor: pointer; /* Курсор в виде указателя (Pointer cursor) */
-    padding: 9px 12px; /* Внутренние отступы (Internal padding) */
-    transition: background-color 0.3s; /* Плавное изменение цвета фона (Smooth background color transition) */
-}
-
-.поиск button:hover {
-    background-color: #6c757d; /* Цвет фона при наведении (Background color on hover) */
-}
-
-.поиск button:active {
-    background-color: #993535; /* Цвет фона при нажатии (Background color when active) */
-}
-
-/* Медиа-запрос для мобильных устройств (Media query for mobile devices) */
-@media (max-width: 600px) {
-    .поиск input[type="search"] {
-        width: 80%; /* Увеличенная ширина поля для мобильных (Increased input width for mobile) */
-    }
-}
-
-/* Стили для контейнера видео */
-.video-container {
-  
-    margin: 10px;
-    flex: 0 0 calc(33.33% - 20px); /* Фиксированная ширина для 3 видео */
-    min-width: 300px; /* Минимальная ширина контейнера */
-    background-color: #ffffff;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 5px; /* Закругленные углы */
-     
-    padding: 20px; /* Внутренние отступы со всех сторон */
-   
-   
-}
-
-/*s*/
-
-
-.video-container {
-    flex: 0 0 calc(33.33% - 20px); /* Ширина для 3 видео в ряд */
-    margin: 10px;
-    min-width: 300px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-/* Основной контейнер для видео-галереи*/
-.container {
-    display: flex; /* Используем flexbox */
-    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
-    justify-content: flex-start; /* Выравнивание элементов с начала */
-    gap: 20px; /* Отступ между видео */
-    padding: 20px; /* Отступ от краев контейнера */
-    width: 100%; /* Занимает всю доступную ширину */
-}
-
-
-
-.container {
-    width: 200px;
-    height: 100px;
-   
-    }
-
-.container{
-    display:grid;
-    justify-items: center;
-grid-column: 1 / 3; /* Занимает колонки 1 и 2 */
-       grid-row: 1; /* Занимает первую строку */
-
-}
-
-
-
-
-
-
-  
-
-
-
-/* Настройка внешнего вида скроллбара для WebKit браузеров */
-.container::-webkit-scrollbar {
-    height: 8px; /* Высота скроллбара */
-}тиль дорожки скроллбара */
-.container::-webkit-scrollbar-track {
-    background: #cfcfcf; /* Цвет фона дорожки */
-    border-radius: 4px; /* Скругление углов */
-}
-
-/* Стиль ползунка скроллбара */
-.container::-webkit-scrollbar-thumb {
-    background: #838383; /* Цвет ползунка */
-    border-radius: 4px; /* Скругление углов */
-}
-
-/* Настройки для видеоплеера */
+/* Стили для видеоплеера */
 .video-js {
-    width: 100%; /* Занимает всю доступную ширину */
-    height: auto; /* Автоматическая высота */
-    aspect-ratio: 16/9; /* Соотношение сторон 16:9 */
+  width: 100%; /* Ширина на всю доступную область */
+  aspect-ratio: 16/9; /* Соотношение сторон 16:9 */
 }
 
-
-/* Стили для блока реакций под видео */
-.reaction {
-    display: flex;
-    flex-direction: row; /* Горизонтальное расположение */
-    justify-content: center; /* Центрирование по горизонтали */
-    gap: 10px; /* Расстояние между элементами */
-    margin-top: 10px; /* Отступ сверху */
+/* Контейнер для кнопок реакций */
+.video-reactions {
+  margin-top: 10px; /* Отступ сверху */
 }
 
-/* Скрытие сообщения о неподдерживаемом JavaScript */
-.vjs-no-js {
-    display: none;
+/* Кнопки лайк/дизлайк */
+.like-btn, .dislike-btn {
+  padding: 5px 10px; /* Внутренние отступы */
+  margin-right: 10px; /* Отступ справа между кнопками */
+  border: none; /* Убирает рамку */
+  background: none; /* Убирает фон */
+  cursor: pointer; /* Курсор-указатель при наведении */
+  font-size: 1.2em; /* Размер эмодзи */
 }
 
-/* Стили для элемента вывода */
-#output {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-/* Адаптивные стили для мобильных устройств */
-@media (max-width: 767px) {
-    .video-container {
-        flex: 0 0 calc(100% - 20px); /* Занимает всю ширину минус отступы */
-        min-width: 250px; /* Минимальная ширина */
-    }
-}
-
-/* Стили для панели с иконками */
-#icons {
-    position: fixed; /* Фиксированное позиционирование */
-    left: 0;
-    top: 50%; /* Центрирование по вертикали */
-    transform: translateY(-50%);
-    padding: 15px;
-    background-color: rgba(112, 109, 109, 0.9); /* Полупрозрачный фон */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
-    border-radius: 5px;
-    z-index: 100; /* Поверх остального контента */
-    transition: all 0.3s ease; /* Плавные переходы */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Сброс стилей списка иконок */
-#icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Адаптация панели иконок для мобильных устройств */
-@media screen and (max-width: 767px) {
-    #icons {
-        bottom: 0;
-        top: auto; /* Отменяет верхнее позиционирование */
-        left: 0;
-        right: 0;
-        transform: none;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 10px;
-    }
-    
-    .поиск input[type="search"] {
-        margin-left: 5%; /* Отступ слева для поля поиска */
-    }
-    
-    .поиск button {
-        margin-right: 5%; /* Отступ справа для кнопки */
-    }
-}
-
-/* Стили для ссылок в панели иконок */
-#icons a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-height: 100px;
-    transition: transform 0.2s, opacity 0.2s; /* Анимация при наведении и клике */
-}
-
-/* Эффект при наведении на иконку */
-#icons a:hover {
-    transform: scale(1.1); /* Увеличение размера */
-}
-
-/* Эффект при нажатии на иконку */
-#icons a:active {
-    opacity: 0.8; /* Уменьшение прозрачности */
-}
-
-/* Стили для закрепленной панели иконок */
-#icons.sticky {
-    position: fixed;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* Адаптация размера иконок для маленьких экранов */
-@media (max-width: 600px) {
-    #icons a {
-        max-height: 10%;
-    }
+/* Навигационная панель */
+.app-navigation {
+  position: fixed; /* Фиксированное позиционирование */
+  bottom: 0; /* Прикреплена к низу экрана */
+  width: 100%; /* Ширина на весь экран */
+  background: white; /* Белый фон */
+  padding: 10px; /* Внутренний отступ */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Тень сверху */
 }
